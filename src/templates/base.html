@@ -1,0 +1,44 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Petskin</title>
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-info" aria-label="Eighth navbar example">
+    <div class="container">
+      <a class="navbar-brand" href="#">Petskin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+        <div class="text-end">
+					<a href="#" class="btn btn-outline-light">Sign in</a>
+					<a href="#" class="btn btn-light">Join us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container main-container">
+    <div class="row">
+      <div class="col-md-9">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="col-md-3">
+        <div class="fs-4">Side bare</div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
